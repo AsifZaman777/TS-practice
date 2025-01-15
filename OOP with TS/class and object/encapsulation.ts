@@ -46,6 +46,6 @@ account.deposit(500);
 account.withdraw(1200);
 
 //lets try to access the balance property directly
-console.log(account.balance); //errror: Property 'balance' is private and only accessible within class 'BankAccount'.
+// console.log(account.balance); //errror: Property 'balance' is private and only accessible within class 'BankAccount'.
 
 
