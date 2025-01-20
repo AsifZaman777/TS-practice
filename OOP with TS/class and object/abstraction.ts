@@ -1,28 +1,41 @@
-/**
- * Abstraction is a process of hiding the implementation details and showing only functionality to the user.
- */
+// show the abstraction concept in typescript using abstract class, interface
 
-abstract class Shape {
-    abstract getArea(): number;
-
-    describe(): void {
-        console.log('This is a shape');
+// using abstract class
+abstract class Animal {
+    constructor(public name: string) {}
+    abstract makeSound(): void;
+    move(): void {
+        console.log(`${this.name} is roaming the earth...`);
     }
 }
 
-class Circle extends Shape{
-    radius:number;
-
-    constructor(radius:number){
-        super();
-        this.radius = radius;
+class Dog extends Animal {
+    constructor(name: string) {
+        super(name);
     }
-
-    getArea(): number {
-        return Math.PI * this.radius * this.radius;
+    makeSound(): void {
+        console.log(`${this.name} says: bark bark`);
     }
 }
 
+const dog = new Dog('Buddy');
+dog.makeSound();
+dog.move();
 
-let circle = new Circle(10);
-console.log("Area of circle: "+circle.getArea());
+// using interface
+interface AnimalInterface {
+    makeSound(): void;
+}
+
+class Cat implements AnimalInterface {
+    constructor(public name: string) {}
+    makeSound(): void {
+        console.log(`${this.name} says: meow meow`);
+    }
+}
+
+const cat = new Cat('Whiskers');
+cat.makeSound();
+
+
+
