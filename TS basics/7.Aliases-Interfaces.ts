@@ -152,5 +152,5 @@ console.log(myLaptop);
 // | Can define primitives, unions, intersections? | ✅ Yes                             | ❌ No                          |
 // | Can be extended/implemented?                  | ❌ No (`&` for intersection)       | ✅ Yes (`extends`, `implements`) |
 // | Can be merged (declaration merging)?          | ❌ No                              | ✅ Yes                         |
-
+// | Can define function types?                    | ✅ Yes                             | ✅ Yes (but different syntax)  |
 
