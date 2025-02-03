@@ -67,8 +67,8 @@ function processPayment(paymentMethod:PaymentMethod, amount:number)
 
 let payments: PaymentMethod[] = [new CreditCard(), new Bkash(), new CryptoCurrency()];
 
-payments.forEach(paymentMethod => {
-    processPayment(paymentMethod, 100);
+payments.forEach(payment => {
+    processPayment(payment, 100);
 });
 
 
